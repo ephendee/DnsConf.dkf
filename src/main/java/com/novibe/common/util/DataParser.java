@@ -48,9 +48,9 @@ public class DataParser {
     private static String stripInlineComment(String line) {
         int commentIndex = line.indexOf('#');
         if (commentIndex >= 0) {
-            return line.substring(0, commentIndex);
+            return line.substring(0, commentIndex).strip();
         }
-        return line.strip();
+        return line;
     }
 
     private static boolean isValidIP(String ip) {
